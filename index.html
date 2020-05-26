@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gossips</title>
-  
-  <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <header>
-          <h1 class="title">Gossips..</h1>
-      </header>
-      <main>
-        <div class="flex">
-          <form class="form">
-              <label for="title">Title</label><br>
-              <input class="u-full-width" id="title" name="title" type="text"><br>
-              <label for="content">Description</label><br>
-              <textarea class="u-full-width" id="content" name="gossip" type="text"></textarea><br>
-              <button class="button-primary">Gossip</button>
-          </form>
-          <div class="loading">
-              <img src="loading.gif" alt="">
-          </div>
-          <div class="gossips">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
+    <!--Main css-->
+    <link rel="stylesheet" href="resources/css/style.css">
+
+    <!--Bootstarp css-->
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+    
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!--reset and animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+
+<body>
+  <!--Post-Form-->
+  <div class="float-btn">
+
+      <!--post button-->
+       <button id="in"><i class="fas fa-bomb fa-3x"></i></button>
+
+      <!--popup class-->
+       <div id="popup" class="animated">
+          <div class="left animated">
+
+             <!--popup form-->
+             <form class="form">
+                 <a id="out"><img src="./resources/img/svg/interface.svg" alt=""></a>
+                 <div class="form-group">
+                      <input class="form-control" id="title" name="title" type="text" placeholder="Title">
+                      <textarea class="form-control" rows="7" id="content" name="gossip" type="text" placeholder="Description"></textarea>
+                      <button class="btn bg-red">Gossip</button>
+                 </div>
+             </form>
+             <!--popup form ends-->
           </div>
-          </div>
-      </main>
-      <script src="client.js"></script>
-  </body>
-  </html>
+      </div>
+      <!--popup class ends-->
+  </div>
+  <!--Post-Form ends-->
+
+  <!--Main-section-->
+  <main>
+    <div class="gossips"></div>
+  </main>
+  <!--Main-section ends-->
+  <!--loading element-->
+  <div class="loading">
+   <img src="./resources/img/loading.gif" alt="">
+</div>
+  <!--Main js-->
+  <script src="resources/js/script.js"></script>
+
+  <!--bootstarp js-->
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>

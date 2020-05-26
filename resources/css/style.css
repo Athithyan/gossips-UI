@@ -1,0 +1,164 @@
+/* General */
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  font-size:18px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* post button*/
+#in{
+  position: fixed;
+  background: white;
+  z-index: 2;
+  right: 2%;
+  width: 80px;
+  height: 80px;
+  bottom: 2%;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+#in i{
+  z-index: 2;
+}
+#in:hover{
+  background: #FFA07A;
+}
+/*popup form */
+#popup{
+  display: none;
+  background-color: rgba(0,0,0,0.7);
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  justify-content: space-between;
+  z-index: 10;
+}
+#popup .left{
+ width: 500px;
+ padding: 30px;
+ margin: auto;
+ text-align: center;
+ z-index: 10;
+ background:#FFA07A;
+ position: relative;
+}
+/*form*/
+.form{
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  height: 300px;
+  opacity: 1;
+}
+.form .form-group{
+  display: flex;
+  flex-direction: column;
+}
+.form-group input{
+  height: 50px;
+}
+/* submit button*/
+.form .btn{
+  width: 100%;
+  height: 55px;
+  background: red;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+/*close button*/
+#out{
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  z-index: 10;
+  background: transparent;
+}
+#out img {
+  width: 40px;
+  right: 10%;
+}
+/* Gossips section*/
+.gossips {
+  column-gap: 16px;
+  margin: 8px 16px; 
+}
+.note {
+  background-color:#f8f8ff;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
+  margin: 7px;
+  padding: 30px;
+  display: inline-block;
+  color:black;
+  transition: all 1s ease-in-out;
+  }
+.note:hover{
+  background:#FFA07A; 
+}
+.note h1{
+  font-size: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  font-weight:700;
+  padding: 10px;
+}
+.note p{
+  font-size: 14px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto; 
+  font-weight:500;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.note small{
+  position: fixed;
+  bottom: 1%;
+  left: 10%;
+  font-size: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .gossips{
+    column-count: 1;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 620px) {
+  .gossips{
+    column-count: 1;
+  }
+}
+@media only screen and (min-width: 621px) and (max-width: 1023px) {
+  .gossips{
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .gossips{
+    column-count: 3;
+  }
+}
+/*loading element*/
+.loading{
+width:100%;
+height:100%;
+position: absolute;
+top:0;
+background: rgba(0,0,0,0.5);
+}
+.loading img{
+position: absolute;
+background: transparent;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+}
